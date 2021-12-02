@@ -17,11 +17,26 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 }
 
 function validateInput(testInput) {
-   
+    if (testInput == ""){
+        return "Empty"
+    }
+    if (isNaN(testInput)){
+        return "Not a Number"
+    }
+    if (!isNaN(testInput)){
+        return "Is a Number"
+    }
 }
 
+console.log("hello")
+console.log(validateInput("a"))
+formSubmission()
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-   
+    pilot = ""
+   if (validateInput(pilot) || validateInput(copilot) || validateInput(fuelLevel) || validateInput(cargoLevel)){
+       console.log("All fields are required!")
+       event.preventDefault()
+   }
 }
 
 async function myFetch() {
