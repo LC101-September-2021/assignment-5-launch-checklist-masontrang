@@ -1,5 +1,5 @@
 // Write your helper functions here!
-require('isomorphic-fetch');
+// require('isomorphic-fetch');
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
    // Here is the HTML formatting for our mission target div.
@@ -28,15 +28,15 @@ function validateInput(testInput) {
     }
 }
 
-console.log("hello")
-console.log(validateInput("a"))
-formSubmission()
+
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-    pilot = ""
-   if (validateInput(pilot) || validateInput(copilot) || validateInput(fuelLevel) || validateInput(cargoLevel)){
-       console.log("All fields are required!")
-       event.preventDefault()
-   }
+    alert("hello")
+    // alert(validateInput(pilot))
+    // alert("All fields are required!")
+    
+
+    // || validateInput(copilot) == "Empty" || validateInput(fuelLevel) == "Empty" || validateInput(cargoLevel) == "Empty")
+  
 }
 
 async function myFetch() {
