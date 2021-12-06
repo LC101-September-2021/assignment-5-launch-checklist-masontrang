@@ -34,7 +34,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let copilotStatus = document.getElementById("copilotStatus")
     let fuelStatus = document.getElementById("fuelStatus")
     let cargoStatus = document.getElementById("cargoStatus")
-    let launchStatus
+    let launchStatus = ""
 
 
     if(validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" ||validateInput(cargoLevel) === "Empty"){
@@ -48,7 +48,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         if (fuelLevel < 10000 && cargoLevel > 10000){
             fuelStatus.innerHTML = `Not enough fuel`
             cargoStatus.innerHTML = `Too much cargo`
-            launchStatus.innerHTML = `Lunch not ready`
+            launchStatus.innerHTML = `Launch not ready`
             launchStatus.style.color = "#C7254E";
         }
         else if ((fuelLevel >= 10000) && cargoLevel > 10000){
