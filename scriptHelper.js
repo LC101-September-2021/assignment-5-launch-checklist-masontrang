@@ -34,7 +34,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let copilotStatus = document.getElementById("copilotStatus")
     let fuelStatus = document.getElementById("fuelStatus")
     let cargoStatus = document.getElementById("cargoStatus")
-    let launchStatus = ""
+    
 
 
     if(validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" ||validateInput(cargoLevel) === "Empty"){
@@ -67,7 +67,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             fuelStatus.innerHTML = `Fuel is ready`
             cargoStatus.innerHTML = `Cargo is ready`
             launchStatus.innerHTML = `Launch is ready`
-            launchStatus.style.color = "Green";
+            launchStatus.style.color = "green";
         }
      }
 }
