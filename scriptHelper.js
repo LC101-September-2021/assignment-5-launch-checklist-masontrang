@@ -1,19 +1,19 @@
 // Write your helper functions here!
-// require('isomorphic-fetch');
+require('isomorphic-fetch');
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
    // Here is the HTML formatting for our mission target div.
-                let missionTarget = document.querySelector("#missionTarget");
-                missionTarget.style.visibility = "visible";
-                missionTarget.innerHTML = `<h2>Mission Destination</h2>
-                <ol>
-                    <li>Name: ${name} </li>
-                    <li>Diameter: ${diameter} </li>
-                    <li>Star: ${star}</li>
-                    <li>Distance from Earth: ${distance}</li>
-                    <li>Number of Moons: ${moons}</li>
-                </ol>
-                <img src="${imageUrl}">`
+    let missionTarget = document.querySelector("#missionTarget");
+    missionTarget.style.visibility = "visible";
+    missionTarget.innerHTML = `<h2>Mission Destination</h2>
+    <ol>
+        <li>Name: ${name} </li>
+        <li>Diameter: ${diameter} </li>
+        <li>Star: ${star}</li>
+        <li>Distance from Earth: ${distance}</li>
+        <li>Number of Moons: ${moons}</li>
+    </ol>
+    <img src="${imageUrl}">`
 }
 
 function validateInput(testInput){
@@ -29,12 +29,12 @@ function validateInput(testInput){
     }
 }
 
-
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let pilotStatus = document.getElementById("pilotStatus")
     let copilotStatus = document.getElementById("copilotStatus")
     let fuelStatus = document.getElementById("fuelStatus")
     let cargoStatus = document.getElementById("cargoStatus")
+    let launchStatus
 
 
     if(validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" ||validateInput(cargoLevel) === "Empty"){
@@ -69,13 +69,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             launchStatus.innerHTML = `Launch is ready`
             launchStatus.style.color = "Green";
         }
-    
-
-
      }
-
-    
-
 }
 
 async function myFetch() {
@@ -88,7 +82,6 @@ async function myFetch() {
             // planetsReturned = json
          });
       });
-   
     return planetsReturned;
 }
 
