@@ -1,5 +1,5 @@
 // Write your helper functions here!
-require('isomorphic-fetch');
+// require('isomorphic-fetch');
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
    // Here is the HTML formatting for our mission target div.
@@ -57,7 +57,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             launchStatus.innerHTML = `Launch not ready`
             launchStatus.style.color = "#C7254E";
         }
-        else if ( fuelLevel < 10000 && cargoLevel < 10000){
+        else if ( fuelLevel < 10000 && cargoLevel <= 10000){
             fuelStatus.innerHTML = `Fuel not ready`
             cargoStatus.innerHTML = `Cargo Ready`
             launchStatus.innerHTML = `Launch not ready`
